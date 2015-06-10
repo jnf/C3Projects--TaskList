@@ -14,8 +14,8 @@ class Tasks < Sinatra::Base
 
   get "/test-insert" do
     q = TaskList::Queries.new DATABASE_NAME
-    @test = q.test_insert
-
+    @test  = q.test_insert
+    @count = q.count_tasks
     erb :index
   end
 end
