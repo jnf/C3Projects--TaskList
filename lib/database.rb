@@ -24,6 +24,7 @@ module TaskList
       db = SQLite3::Database.new database_name
       db.execute statement, params
     rescue SQLite3::Exception => error
+      "BWOKEN: #{ error }"
       # use this block to recover from an error
       # consider giving the user a special message back
       # inspect the `error` object for information about the error
